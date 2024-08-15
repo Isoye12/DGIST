@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dooking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/ruins.css"> <!-- 외부 스타일 시트 불러오기 -->
+</head>
+<body>
+    <header>
+        <a href="./index.html"><h1 class="logo">Dooking</h1></a>
+        <p class="log">로그인 / 회원가입</p>
+        <input type="search" placeholder="검색어를 입력하세요."> <!-- 검색창 생성 -->
+    <nav>
+        <a href="./event.html">이벤트</a>
+        <a href="./course.html">코스 추천</a>
+    </nav>
+    </header>
+
+    <main>
+        <div class="large-text-box">
+            <h2>자연 관광지 List</h2>
+        </div>
+        <div class="large-box">
+            <a href="./natures/1.html"><img src="../img/nature/Deani.png"></a>
+            <a href="./natures/2.html"><img src="../img/nature/Biseul.png"></a>
+            <a href="./natures/3.html"><img src="../img/nature/Songhae.png"></a>
+            <a href="./natures/4.html"><img src="../img/nature/theArk.png"></a>
+            <a href="./natures/5.html"><img src="../img/nature/FlowerHouse.png"></a>
+        </div>
+    </main>
+
+    <footer>
+        <div id="more">
+            <p>Dooking은 누구나 달성군을 체험할 수 있게 하는 정보 통합 서비스입니다. <br>
+               또한 저희 서비스는 사용자에게 맞춤형 코스 & 달성군 특화 코스를 제공하며, 여러 할인 혜택을 제공합니다.</p>
+            <button id="close" onclick="hide()">닫기</button>
+        </div>
+        <div id="screen">
+            <h2>Dooking</h2>
+            <button id="open" onclick="view()">상세설명보기</button>
+        </div>
+
+        <p class="etc">팔로우 하기</p>
+        <p class="etc">개인정보처리방침</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dooking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/natures.css"> <!-- 외부 스타일 시트 불러오기 -->
+</head>
+<body>
+    <header>
+        <a href="../index.html"><h1 class="logo">Dooking</h1></a>
+        <p class="log">로그인 / 회원가입</p>
+        <input type="search" placeholder="검색어를 입력하세요."> <!-- 검색창 생성 -->
+    <nav>
+        <a href="../event.html">이벤트</a>
+        <a href="../course.html">코스 추천</a>
+    </nav>
+    </header>
+
+    <main>
+        <div class="large-box">
+            <img src="../../img/special/watermelon.png">
+            <h2>화원 구라 수박</h2>
+            <div class="large-text-box">
+                <p> - 무더운 여름에 먹는 수박은 시원한 기운을 가지고 있을 뿐만 아니라 우리의 몸을 차갑게 하고 이뇨를 촉진시켜 더위를 이겨내기에 알맞은 채소이다.
+                <br>- 또한 수박은 신장병이나, 고혈압 같은 병들로 생기는 붓기를 배는데 효과적이고 수박의 씨도 이와 같은 기능을 가지고 있기 때문에 먹는 것이 좋다.
+                <br>- 수박은 물론 그 자체로 먹는 것도 좋지만 평소에는 버리는 속껍질 부분을 나물로 무쳐먹는 방법도 있다.
+                <br>- 비옥한 토질에서 생산하는 화원 구라수박은 껍질이 얇고 당도가 높아 과즙이 부드러우며 맛이 아주 좋습니다.
+                </p>
+            </div>
+        </div>
+
+        <contents class="contents"> <!-- 예약하기 -->
+            <h1>> 주문하기</h1>
+
+            <table border="2">
+                <tr class="tableColor">
+                    <th class="tableColor">구분</th>
+                    <th>1kg</th>
+                    <th>5kg</th>
+                    <th>7kg</th>
+                </tr>
+                <tr>
+                    <th class="tableColor">일반구매</th>
+                    <td>150,000원</td>
+                    <td>250,000원</td>
+                    <td>200,000원</td>
+                </tr>
+                <tr>
+                    <th class="tableColor">공동구매</th>
+                    <td>145,000원</td>
+                    <td>245,000원</td>
+                    <td>105,000원</td>
+                </tr>
+            </table>
+            
+            <div class="box">
+                 <h2>- 주문서 -</h2>
+
+                <form>
+                <fieldset>
+                    <legend>&nbsp; 정보 (*은 필수 입력란)&nbsp;</legend><br> <!--그룹(네모칸) 이름 지정--><!--&nbsp;: 한 칸 띄우기-->
+                    <label id="u_id">* 이름: <input type="text" for="u_id" placeholder=" 홍길동" required></label><br><br> <!--폼 안에 내용 쓰기--><!--for="u_id": u_id 를 위한 것: 이걸 쓰면 글자와 입력란이 연결됨--><!--input type="입력타입" // required: 이 입력란을 작성하셰요-->
+                    <label id="u_tel">* 전화번호: <input type="tel" for="u_tel" placeholder=" 010-0000-0000" required></label><br><br>
+                    <label id="u_email">이메일: <input type="email"for='u_email' placeholder=" xxxx@gmail.com"></label><br><br> <!--placeholder="희미한 힌트 = 입력했을 때 사라짐-->
+                </fieldset><br><br>
+
+                <fieldset>
+                    <label><input type="radio" name="Donate" checked onclick="CloseChange()"> 일반구매 신청</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label><input type="radio" name="Donate" onclick="OpenChange()"> 공동구매 신청</label><br><br>
+                    <label><input type="radio" name="monthDonate" checked> 1kg</label> <!--checked: 기본선택--><br>
+                    <label><input type="radio" name="monthDonate"> 5kg</label><br> <!--radio: 옵션 단추 or 레디오단추, name="같은 이름": 하니만 선택-->
+                    <label><input type="radio" name="monthDonate"> 7kg</label><br><br>
+                    <div id="changePoint"></div>
+                </fieldset>
+
+                <input type="submit" value="신청하기"> <!--제출 버튼 만들기, value="": 버튼 이름 바꾸기-->
+                </form>
+            </div>
+        </contents>
+    </main>
+
+    <footer> <!-- footer -->
+        <div id="more">
+            <p>Dooking은 누구나 달성군을 체험할 수 있게 하는 정보 통합 서비스입니다. <br>
+               또한 저희 서비스는 사용자에게 맞춤형 코스 & 달성군 특화 코스를 제공하며, 여러 할인 혜택을 제공합니다.</p>
+            <button id="close" onclick="hide()">닫기</button>
+        </div>
+        <div id="screen">
+            <h2>Dooking</h2>
+            <button id="open" onclick="view()">상세설명보기</button>
+        </div>
+
+        <p class="etc">팔로우 하기</p>
+        <p class="etc">개인정보처리방침</p>
+    </footer>
+
+    <script src="../../js/OpenTogether.js"></script>
+</body>
+</html>
